@@ -17,13 +17,11 @@ describe('app routes', () => {
     expect(response.text).toEqual('helloo');
   });
 
-  // it('gets echo of response body from /echo', async() => {
-  //   const response = await request(app)
-  //     .post('/echo')
-  //     .send('helloo');
+  it('gets color /red', async() => {
+    const response = await request(app).get('/red');
 
-  //   expect(response.text).toEqual('helloo');
-  // });
+    expect(response.text).toContain('rojo');
+  });
 
 ////....////new tests above this line////....////
 });
