@@ -23,6 +23,18 @@ describe('app routes', () => {
     expect(response.text).toContain('rojo');
   });
 
+  it('gets color /green', async() => {
+    const response = await request(app).get('/green');
+
+    expect(response.text).toContain('verde');
+  });
+
+  it('gets color /blue', async() => {
+    const response = await request(app).get('/blue');
+
+    expect(response.text).toContain('azure');
+  });
+
 ////....////new tests above this line////....////
 });
 
